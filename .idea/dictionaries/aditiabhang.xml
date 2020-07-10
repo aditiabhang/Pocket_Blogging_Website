@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="aditiabhang">
     <words>
+      <w>bcrypt</w>
       <w>sqlalchemy</w>
     </words>
   </dictionary>
