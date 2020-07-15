@@ -20,4 +20,10 @@ app.config['MAIL_USERNAME'] = "mypocket369@gmail.com"
 app.config['MAIL_PASSWORD'] = "Youknowit!"
 mail = Mail(app)
 
-from pocket_blog import routes
+from pocket_blog.users.routes import users
+from pocket_blog.posts.routes import posts
+from pocket_blog.main.routes import main
+
+app.register_blueprint(users)
+app.register_blueprint(posts)
+app.register_blueprint(main)
