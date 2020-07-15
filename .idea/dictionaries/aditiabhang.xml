@@ -2,6 +2,9 @@
   <dictionary name="aditiabhang">
     <words>
       <w>bcrypt</w>
+      <w>gmail</w>
+      <w>googlemail</w>
+      <w>smtp</w>
       <w>sqlalchemy</w>
     </words>
   </dictionary>
