@@ -1,4 +1,3 @@
-from flask import Blueprint
 from flask import render_template, request, Blueprint
 from pocket_blog.models import Post
 
