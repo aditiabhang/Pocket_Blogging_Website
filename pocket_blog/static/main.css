@@ -1,5 +1,5 @@
 body {
-  background: #fafafa;
+  background: #E0D1D5;
   color: #333333;
   margin-top: 5rem;
 }
@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
-.bg-steel {
+.bg-dark {
   background-color: #5f788a;
 }
 
@@ -25,10 +25,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-section {
-  background: #ffffff;
+  background: #F2E7E6;
   padding: 10px 20px;
   border: 1px solid #dddddd;
-  border-radius: 3px;
+  border-radius: 15px 50px;
   margin-bottom: 20px;
 }
 
