@@ -15,10 +15,9 @@
         <title>Pocket Blog</title>
     {% endif %}
 </head>
-
 <body>
     <header class = "site-header" >
-      <nav class = "navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <nav class = "navbar navbar-expand-md navbar-dark fixed-top">
         <div class = "container">
           <a class="navbar-brand mr-4" href="/"> Pocket Blog </a>
           <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "# navbarToggle" aria-controls = "navbarToggle" aria-expanded = "false" aria-label = "Toggle navigation ">
@@ -29,6 +28,7 @@
               <a class="nav-item nav-link" href="{{ url_for('main.home') }}"> Home </a>
               <a class="nav-item nav-link" href="{{ url_for('main.about') }}"> About </a>
             </div>
+
 
             <! - Navigation bar Right Side ->
             <div class = "navbar-nav">
