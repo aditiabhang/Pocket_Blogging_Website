@@ -4,6 +4,8 @@
       <w>bcrypt</w>
       <w>gmail</w>
       <w>googlemail</w>
+      <w>navi</w>
+      <w>scrollpos</w>
       <w>smtp</w>
       <w>sqlalchemy</w>
     </words>

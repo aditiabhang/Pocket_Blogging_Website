@@ -20,10 +20,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  overflow: auto;
+  height: auto;
+  transition: 0.3s;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: #F2E7E6;
 }
 
 .site-header .navbar-nav .nav-link.active {
