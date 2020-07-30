@@ -14,6 +14,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
+.about_img {
+  display: block;
+  padding-right: 25px;
+}
+
 .bg-dark {
   background-color: #5f788a;
 }
