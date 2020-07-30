@@ -45,9 +45,11 @@ nav {
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
+
 .nav_right {
   width: 30%;
 }
+
 .nav_two {
   width: 20%;
 }
