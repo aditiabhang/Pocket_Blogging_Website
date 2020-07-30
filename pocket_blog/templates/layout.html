@@ -32,14 +32,16 @@
 
 
             <! - Navigation bar Right Side ->
-            <div class = "navbar-nav">
+{#            <div class = "navbar-nav">#}
                 {% if current_user.is_authenticated %}
+                    <div class = "navbar-nav nav_right">
                     <a class="nav-item nav-link" href="{{ url_for('posts.new_post') }}"> New Post </a>
                     <a class="nav-item nav-link" href="{{ url_for('users.account') }}"> Account </a>
                     <a class="nav-item nav-link" href="{{ url_for('users.logout') }}"> Logout </a>
                 {% else %}
-                  <a class="nav-item nav-link" href="{{ url_for('users.login') }}"> Login </a>
-                  <a class="nav-item nav-link" href="{{ url_for('users.register') }}"> Register </a>
+                    <div class = "navbar-nav nav_two">
+                    <a class="nav-item nav-link" href="{{ url_for('users.login') }}"> Login </a>
+                    <a class="nav-item nav-link" href="{{ url_for('users.register') }}"> Register </a>
                 {% endif %}
             </div>
           </div>
