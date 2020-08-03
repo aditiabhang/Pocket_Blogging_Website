@@ -3,6 +3,7 @@ venv
 __pycache__/
 *.py[cod]
 *$py.class
+*.db
 *.DS_Store
 #--------------
 
