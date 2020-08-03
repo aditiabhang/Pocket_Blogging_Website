@@ -18,17 +18,25 @@ class MyTestCase(unittest.TestCase):
     # ensuring that the login page behaves correctly given the correct credentials
     def test_login_correct(self):
         tester = app.test_client(self)
-        response = tester.post('/login', data=dict(email='tomthecat@gmail.com', password='password'), follow_redirects=True)
+        response = tester.post('/login',
+                               data=dict(email='tomthecat@gmail.com', password='password'),
+                               follow_redirects=True)
         self.assertEqual(response.status_code, 200)
 
-        # Oops! login unsuccessful.Please check your email and password.
-
-    # ensuring that the login page behaves correctly given the incorrect credentials
-    def test_login_incorrect(self):
+    # ensuring login page loads correctly
+    def test_logout_page(self):
         tester = app.test_client(self)
-        response = tester.post('/login', data=dict(email='tomthecat@gmail.com', password='password'),
-                               follow_redirects=True)
-        self.assertIn(b"Oops!", response.data)
+        tester.post('/login',
+                    data=dict(email='tomthecat@gmail.com', password='password'),
+                    follow_redirects=True)
+        response = tester.get('/home', follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+
+    # ensuring correct user updates posts
+    def test_post_edit(self):
+        tester = app.test_client(self)
+        response = tester.get('/post/19/update HTTP/1.1', follow_redirects=True)
+        self.assertEqual(response.status_code, 404)
 
 
 if __name__ == '__main__':
