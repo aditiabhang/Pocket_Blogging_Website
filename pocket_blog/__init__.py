@@ -1,9 +1,10 @@
+import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
-from pocket_blog.config import Config
+from pocket_blog.config import Config, DevelopmentConfig
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -15,7 +16,11 @@ mail = Mail()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
-    app.config.from_object(Config)
+    # Working command:
+    # app.config.from_object(DevelopmentConfig)
+
+    app.config.from_object(os.environ['APP_SETTINGS'])
+    # app.config.from_envvar("APP_SETTINGS")
 
     db.init_app(app)
     bcrypt.init_app(app)
