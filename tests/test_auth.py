@@ -4,10 +4,10 @@ from run import app
 
 class MyTestCase(unittest.TestCase):
     # ensuring the flask app is set up
-    def test_one(self):
-        tester = app.test_client(self)
-        response = tester.get('/home', content_type='html/text')
-        self.assertEqual(response.status_code, 200)
+    # def test_one(self):
+    #     tester = app.test_client(self)
+    #     response = tester.get('/home', content_type='html/text')
+    #     self.assertEqual(response.status_code, 200)
 
     # ensuring login page loads correctly
     def test_login_page(self):
@@ -23,20 +23,15 @@ class MyTestCase(unittest.TestCase):
                                follow_redirects=True)
         self.assertEqual(response.status_code, 200)
 
-    # ensuring login page loads correctly
+    # ensuring logout page loads correctly
     def test_logout_page(self):
         tester = app.test_client(self)
         tester.post('/login',
                     data=dict(email='tomthecat@gmail.com', password='password'),
                     follow_redirects=True)
-        response = tester.get('/home', follow_redirects=True)
-        self.assertEqual(response.status_code, 200)
 
-    # ensuring correct user updates posts
-    def test_post_edit(self):
-        tester = app.test_client(self)
-        response = tester.get('/post/19/update HTTP/1.1', follow_redirects=True)
-        self.assertEqual(response.status_code, 404)
+        response = tester.get('/logout', follow_redirects=False)
+        self.assertEqual(response.status_code, 302)
 
 
 if __name__ == '__main__':
