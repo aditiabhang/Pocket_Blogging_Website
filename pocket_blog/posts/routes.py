@@ -1,7 +1,7 @@
-from flask import Blueprint
 from flask import (render_template, url_for, flash,
                    redirect, request, abort, Blueprint)
 from flask_login import current_user, login_required
+
 from pocket_blog import db
 from pocket_blog.models import Post
 from pocket_blog.posts.forms import PostForm
